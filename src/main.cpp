@@ -62,7 +62,7 @@ uint256 hashBestChain = 0;
 CBlockIndex* pindexBest = NULL;
 int64_t nTimeBestReceived = 0;
 bool fImporting = false;
-bool fReindex = false;
+bool fReindex = true;
 bool fAddrIndex = false;
 bool fHaveGUI = false;
 
@@ -1361,16 +1361,16 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
     int64_t nSubsidy = 0 * COIN;
 
     if (nHeight == 1) {
-        nSubsidy = 5000000000 * COIN; // premine
+        nSubsidy = 50000000000 * COIN; // premine
     }
     else if (nHeight > 1 && nHeight <= 100) {
         nSubsidy = 1 * COIN; // instamine prevention
     }
     else if (nHeight > 100 && nHeight <= 200) {
-        nSubsidy = 0 * COIN; // instamine prevention
+        nSubsidy = 1 * COIN; // instamine prevention
     }
     else if (nHeight > 200 && nHeight <= 300) {
-        nSubsidy = 0 * COIN; // instamine prevention
+        nSubsidy = 1 * COIN; // instamine prevention
     }
     else if (nHeight > 300 && nHeight <= 400) {
         nSubsidy = 0 * COIN; // instamine prevention
