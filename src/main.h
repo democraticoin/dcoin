@@ -25,7 +25,7 @@ static const int64_t DARKSEND_POOL_MAX = (4999.99*COIN); //stop Shadownodes
 
 static const int64_t STATIC_POS_REWARD = 1 * COIN; //Constant reward of 1 DCOIN per COIN
 static const int64_t TARGET_SPACING = 60;
-static const int64_t STAKE_TIMESPAN_SWITCH_TIME = 1428537599; //this is old, but works due to being lower than the present time
+static const int64_t STAKE_TIMESPAN_SWITCH_TIME = 1521199177; //this is old, but works due to being lower than the present time
 
 #define INSTANTX_SIGNATURES_REQUIRED           1
 #define INSTANTX_SIGNATURES_TOTAL              2
@@ -40,7 +40,7 @@ class CReserveKey;
 class CWallet;
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */
-static const unsigned int MAX_BLOCK_SIZE = 400000; //each transaction being about 0.5kB / 400000 =block contains about 800,000 transactions * 2.55(minfee) = $2,040,000 USD in rewards to Stake-Holders and Masternodes.
+static const unsigned int MAX_BLOCK_SIZE = 400000; //each transaction being about 0.5kB / 800,000 transactions * 2.55=$2,040,000 USD in rewards to Stake-Holders and Masternodes.
 /** The maximum size for mined blocks */
 static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;
 /** Default for -blockprioritysize, maximum space for zero/low-fee transactions **/
@@ -62,7 +62,7 @@ static const int64_t MIN_TX_FEE = 255000000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 /** No amount larger than this (in satoshi) is valid */
-static const int64_t MAX_MONEY = 500100000 * COIN; 
+static const int64_t MAX_MONEY = 5001000000 * COIN; 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
